@@ -18,13 +18,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname,'book-public', 'src')));
-
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "*");
-  next();
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
