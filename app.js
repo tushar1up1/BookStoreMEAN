@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-//app.use(express.static(path.join(__dirname,'book-public', 'src')));
 app.use(express.static(path.join(__dirname, 'book-public', 'build')));
 
 app.all('/*', function(req, res, next) {
