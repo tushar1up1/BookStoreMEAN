@@ -4,6 +4,7 @@ import { HttpClientModule  } from "@angular/common/http";
 import { APP_BASE_HREF } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
+import {enableProdMode} from '@angular/core';
 
 import { BookListComponent } from './book-list/book-list.component';
 import { AboutComponent } from './about/about.component';
